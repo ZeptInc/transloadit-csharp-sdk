@@ -15,7 +15,7 @@ namespace Tests
         [Test]
         public void InvokeAssemblyWithNotifyUrl()
         {
-            ITransloadit transloadit = new Transloadit.Transloadit("YOUR-PUBLIC-API-KEY", "YOUR-SECRET-KEY");
+            ITransloadit transloadit = TransloaditFactory.CreateInstance();
             IAssemblyBuilder assembly = new AssemblyBuilder();
             IStep step = new Transloadit.Assembly.Step();
 

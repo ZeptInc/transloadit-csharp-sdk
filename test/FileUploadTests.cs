@@ -15,7 +15,7 @@ namespace Tests
         [Test]
         public void ResizeImageExistingFile()
         {
-            ITransloadit transloadit = new Transloadit.Transloadit("YOUR-PUBLIC-API-KEY", "YOUR-SECRET-KEY");
+            ITransloadit transloadit = TransloaditFactory.CreateInstance();
             IAssemblyBuilder assembly = new AssemblyBuilder();
 
             assembly.AddFile(System.IO.Path.GetFullPath("test.jpg"));
@@ -38,7 +38,7 @@ namespace Tests
         [Test]
         public void ResizeImageNonExistingFile()
         {
-            ITransloadit transloadit = new Transloadit.Transloadit("YOUR-PUBLIC-API-KEY", "YOUR-SECRET-KEY");
+            ITransloadit transloadit = TransloaditFactory.CreateInstance();
             IAssemblyBuilder assembly = new AssemblyBuilder();
 
             assembly.AddFile(@"test_non_existing.jpg");

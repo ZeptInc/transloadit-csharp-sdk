@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Net;
 using System.IO;
+using System.Net;
 using Transloadit.Log;
 
 namespace Transloadit
@@ -126,15 +126,16 @@ namespace Transloadit
                         {
                             bytes.AddRange(Encoding.UTF8.GetBytes(String.Format(PreFormDataFileTemplate, boundary, file.Key, System.IO.Path.GetFileName(file.Value))).ToArray<byte>());
                             bytes.AddRange(File.ReadAllBytes(file.Value).ToList<byte>());
-                            bytes.AddRange(Encoding.UTF8.GetBytes(String.Format("\r\n\r\n")).ToArray<byte>());
+                            bytes.AddRange(Encoding.UTF8.GetBytes("\r\n\r\n").ToArray<byte>());
                         }
                     }
 
                     bytes.AddRange(Encoding.UTF8.GetBytes(String.Format(EndRequestTemplate, boundary)).ToList<byte>());
 
                     byte[] postHeaderBytes = bytes.ToArray();
-                    request.ContentLength = postHeaderBytes.Length;
-                    Stream requestStream = request.GetRequestStream();
+                    //request.ContentLength = postHeaderBytes.Length;                    
+                    //Stream requestStream = request.GetRequestStream();
+                    Stream requestStream = request.GetRequestStreamAsync().Result;
                     requestStream.Write(postHeaderBytes, 0, postHeaderBytes.Length);
                 }
             }
@@ -147,7 +148,8 @@ namespace Transloadit
 
             try
             {
-                response = request.GetResponse();
+                //response = request.GetResponse();
+                response = request.GetResponseAsync().Result;
             }
             catch (WebException e)
             {

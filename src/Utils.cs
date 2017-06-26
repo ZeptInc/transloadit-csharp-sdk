@@ -20,10 +20,11 @@ namespace Transloadit
         {
             var keyByte = Encoding.UTF8.GetBytes(key);
             var hmacsha1 = new HMACSHA1(keyByte);
-            var messageBytes = Encoding.Default.GetBytes(str);
-            hmacsha1.ComputeHash(messageBytes);
+            //var messageBytes = Encoding.Default.GetBytes(str);
+            var messageBytes = Encoding.UTF8.GetBytes(str);
+            byte[] buff = hmacsha1.ComputeHash(messageBytes);
 
-            byte[] buff = hmacsha1.Hash;
+            //byte[] buff = hmacsha1.Hash;
             string sbinary = "";
             for (int i = 0; i < buff.Length; i++)
             {

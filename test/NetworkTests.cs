@@ -16,7 +16,7 @@ namespace Tests
         [Test]
         public void NoInternetConnection()
         {
-            ITransloadit transloadit = new Transloadit.Transloadit("YOUR-PUBLIC-API-KEY", "YOUR-SECRET-KEY");
+            ITransloadit transloadit = TransloaditFactory.CreateInstance();
             IAssemblyBuilder assembly = new AssemblyBuilder();
 
             TransloaditResponse response = transloadit.InvokeAssembly(assembly);

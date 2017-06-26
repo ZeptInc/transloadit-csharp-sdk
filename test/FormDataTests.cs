@@ -15,7 +15,7 @@ namespace Tests
         [Test]
         public void InvokeAssemblyWithFormData()
         {
-            ITransloadit transloadit = new Transloadit.Transloadit("YOUR-PUBLIC-API-KEY", "YOUR-SECRET-KEY");
+            ITransloadit transloadit = TransloaditFactory.CreateInstance();
             IAssemblyBuilder assembly = new AssemblyBuilder();
             IStep step = new Transloadit.Assembly.Step();
 
@@ -32,7 +32,7 @@ namespace Tests
         [Test]
         public void InvokeAssemblyWithoutFormData()
         {
-            ITransloadit transloadit = new Transloadit.Transloadit("YOUR-PUBLIC-API-KEY", "YOUR-SECRET-KEY");
+            ITransloadit transloadit = TransloaditFactory.CreateInstance();
             IAssemblyBuilder assembly = new AssemblyBuilder();
             IStep step = new Transloadit.Assembly.Step();
 

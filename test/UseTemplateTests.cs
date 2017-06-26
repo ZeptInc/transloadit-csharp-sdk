@@ -15,7 +15,7 @@ namespace Tests
         [Test]
         public void ExistingTemplate()
         {
-            ITransloadit transloadit = new Transloadit.Transloadit("YOUR-PUBLIC-API-KEY", "YOUR-SECRET-KEY");
+            ITransloadit transloadit = TransloaditFactory.CreateInstance();
             IAssemblyBuilder assembly = new AssemblyBuilder();
 
             assembly.SetTemplateID("YOUR-EXISTING-TEMPLATE-ID");
@@ -28,7 +28,7 @@ namespace Tests
         [Test]
         public void NonExistingTemplate()
         {
-            ITransloadit transloadit = new Transloadit.Transloadit("YOUR-PUBLIC-API-KEY", "YOUR-SECRET-KEY");
+            ITransloadit transloadit = TransloaditFactory.CreateInstance();
             IAssemblyBuilder assembly = new AssemblyBuilder();
 
             assembly.SetTemplateID("YOUR-NON-EXISTING-TEMPLATE-ID");
