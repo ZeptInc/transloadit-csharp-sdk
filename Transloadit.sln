@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "test\Tests.csproj", "{3933EB01-1EE2-4005-956E-BDD269F2660C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transloadit", "Transloadit\Transloadit.csproj", "{0B022026-B8F2-4045-A805-28A2D7DB41F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transloadit", "Transloadit\Transloadit.csproj", "{391F64E3-DA49-4FA1-BEF9-1EE19B35EDD8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{3933EB01-1EE2-4005-956E-BDD269F2660C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3933EB01-1EE2-4005-956E-BDD269F2660C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3933EB01-1EE2-4005-956E-BDD269F2660C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0B022026-B8F2-4045-A805-28A2D7DB41F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0B022026-B8F2-4045-A805-28A2D7DB41F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0B022026-B8F2-4045-A805-28A2D7DB41F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0B022026-B8F2-4045-A805-28A2D7DB41F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{391F64E3-DA49-4FA1-BEF9-1EE19B35EDD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{391F64E3-DA49-4FA1-BEF9-1EE19B35EDD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{391F64E3-DA49-4FA1-BEF9-1EE19B35EDD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{391F64E3-DA49-4FA1-BEF9-1EE19B35EDD8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
